@@ -25,4 +25,15 @@ internal class Program
         }
         return resultArray;
     }
+
+        static string JoinArray(string[] inArray, char inSeparator)
+    {
+        string resultString = "[";
+        if (inArray.Length == 0) return resultString + "]";
+        foreach (var item in inArray)
+        {
+            resultString += $"\"{item}\"{inSeparator} ";
+        }
+        return resultString + "\b\b]";
+    }
 }
